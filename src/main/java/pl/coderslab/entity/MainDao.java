@@ -46,11 +46,11 @@ public class MainDao {
 
         // find All
 
-        UserDao userToFindAll = new UserDao();
+     /*   UserDao userToFindAll = new UserDao();
         try {
             System.out.println(Arrays.deepToString(userToFindAll.findAll()));
         } catch (SQLException|NullPointerException e) {
             e.printStackTrace();
-        }
+        }*/
     }
 }
