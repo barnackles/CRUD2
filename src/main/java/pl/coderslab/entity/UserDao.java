@@ -55,7 +55,7 @@ public class UserDao {
              User userFromDb = null;
 
             while (resultSet.next()) {
-                userFromDb = new User(resultSet.getString("username"),resultSet.getString("email"), resultSet.getString("password") );
+                userFromDb = new User(resultSet.getString("username"),resultSet.getString("email"), "Hasło użytkownika" );
                 userFromDb.setId(resultSet.getInt(1));
             }
             return userFromDb;
@@ -103,7 +103,7 @@ public class UserDao {
 
 
             while (resultSet.next()) {
-                User userFromDb = new User(resultSet.getString("username"),resultSet.getString("email"), resultSet.getString("password"));
+                User userFromDb = new User(resultSet.getString("username"),resultSet.getString("email"), "Hasło użytkownika");
                 userFromDb.setId(resultSet.getInt(1));
                 arrayOfUsers = addToArray(userFromDb, arrayOfUsers);
             }
