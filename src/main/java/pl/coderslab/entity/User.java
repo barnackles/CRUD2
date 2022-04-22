@@ -5,7 +5,7 @@ public class User {
     private int id;
     private String userName;
     private String email;
-    private String password;
+    private String password = "none";
 
     public User(String userName, String email, String password) {
         this.id = 0;
