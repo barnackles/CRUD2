@@ -1,4 +1,4 @@
-package pl.coderslab.development;
+package pl.coderslab.users;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -18,8 +18,8 @@ import java.io.IOException;
         int id = Integer.parseInt(request.getParameter("id"));
         HttpSession s = request.getSession();
         s.setAttribute("id", id);
-        response.sendRedirect("/choice.jsp");
-
+        RequestDispatcher rq = request.getRequestDispatcher("/choice.jsp");
+        rq.forward(request, response);
 
     }
 }

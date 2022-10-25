@@ -15,14 +15,16 @@
     <!-- Content Row -->
 
     <div>
-        <form action="<c:url value="/user/choice"/>" method="POST">
+        <form action="<c:url value="/user/delete"/>" method="POST">
             <label>
                 Czy na pewno chcesz usunąć tego użytkownika?
                 <br>
                 <input type="radio" name="choice" value="yes" />TAK
                 <input type="radio" name="choice" value="no" checked="checked" /> NIE
+
             </label>
             <button type="submit">Potwierdź wybór</button>
+            <input type="hidden" name="id" value="${id}">
         </form>
 
     </div>

@@ -19,10 +19,17 @@ public class userDelete extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
 
-            int userId = Integer.parseInt(request.getParameter("id"));
-            UserDao userToDeleteDao = new UserDao();
-            userToDeleteDao.delete(userId);
-            response.sendRedirect("/user/list");
+            String choiceValue = request.getParameter("choice");
+
+            if ("yes".equals(choiceValue)) {
+
+                int userId = Integer.parseInt(request.getParameter("id"));
+                UserDao userToDeleteDao = new UserDao();
+                userToDeleteDao.delete(userId);
+                response.sendRedirect("/user/list");
+            } else {
+                response.sendRedirect("/user/list");
+            }
 
 
     }
