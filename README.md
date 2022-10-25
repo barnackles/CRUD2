@@ -1,3 +1,4 @@
-# Workshop3
-Workshop3
-CRUD Application 
+# CRUD2 (Workshop 3)
+
+Simple CRUD with servlets and JSP views.
+
