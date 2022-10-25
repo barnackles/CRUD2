@@ -32,7 +32,7 @@
                         <td>${user.userName}</td>
                         <td>${user.email}</td>
                         <td>
-                            <form method="POST" action="<c:url value="/user/delete"/>" class="inline">
+                            <form method="POST" action="<c:url value="/user/choice"/>" class="inline">
                                 <input type="hidden" name="id" value="${user.id}">
                                 <button type="submit" name="submit_param" value="submit_value" class="inline link-button">Usuń</button>
                             </form>
